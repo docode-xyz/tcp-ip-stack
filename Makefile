@@ -2,10 +2,13 @@ TARGET = runner
 
 CC = gcc
 CFLAGS = -Iinclude -c -Wall -Wextra -pedantic -Werror
-LDFLAGS =
+LDFLAGS = -L$(LIB_DIR) -Wl,-rpath=$(LIB_DIR) $(LIBS)
+
+LIB_DIR = lib/
 
 SOURCES = $(wildcard src/*.c)
 OBJECTS = $(SOURCES:.c=.o)
+LIBS = -lglist
 
 .PHONY: all clean
 
