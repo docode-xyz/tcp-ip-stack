@@ -10,6 +10,8 @@
 
 #include <assert.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 #include "../include/graph/graph.h"
 #include "../lib/glist/glist.h"
