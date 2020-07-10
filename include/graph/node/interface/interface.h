@@ -25,6 +25,7 @@ typedef struct interface {
   char if_name[INTERFACE_NAME_LEN];
   node_t *att_node; /**< Owning node; To which node related this interface */
   link_t *link;
+  net_iface_prop_t net_iface_prop;
 } interface_t;
 
 void dump_interface(const interface_t *interface);
