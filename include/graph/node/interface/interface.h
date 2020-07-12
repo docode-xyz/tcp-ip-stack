@@ -28,6 +28,8 @@ typedef struct interface {
   net_iface_prop_t net_iface_prop;
 } interface_t;
 
+void interface_set_mac_addr(interface_t *iface);
+
 void dump_interface(const interface_t *interface);
 
 #endif
