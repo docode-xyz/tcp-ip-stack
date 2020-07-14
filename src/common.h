@@ -15,6 +15,7 @@
 
 #include "../include/graph/graph.h"
 #include "../include/net.h"
+#include "../include/utils.h"
 #include "../lib/glist/glist.h"
 
 #endif
