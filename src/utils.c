@@ -1,5 +1,6 @@
 #include "common.h"
 #include <arpa/inet.h>
+#include <assert.h>
 #include <netinet/in.h>
 #include <stdint.h>
 #include <sys/socket.h>
@@ -20,4 +21,15 @@ void util_apply_mask(const char *prefix, const char mask, char *str_prefix) {
   inet_ntop(AF_INET, &prefix_binary, str_prefix, 16);
 
   str_prefix[IP_ADDR_LEN - 1] = '\0';
+}
+
+void util_l2_fill_mac_broadcast(uint8_t *mac_arr) {
+  assert(mac_arr);
+
+  mac_arr[0] = 0xFF;
+  mac_arr[1] = 0xFF;
+  mac_arr[2] = 0xFF;
+  mac_arr[3] = 0xFF;
+  mac_arr[4] = 0xFF;
+  mac_arr[5] = 0xFF;
 }
